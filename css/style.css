@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,18 +20,21 @@ header {
 
 .options {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    background-color: black;
-    position: relative;
     z-index: 1;
     width: 100%;
     height: 70px;
-    right: 6px;
-    bottom: 16px;
 }
 
-.options > div {
+.options.top {
+    justify-content: flex-end;
+    position: relative;
+    right: 6px;
+    bottom: 16px;
+    background-color: black;
+}
+
+.options.top > div {
     display: flex;
     align-items: center;
     background-color: #4A4A4A;
@@ -38,22 +43,22 @@ header {
     cursor: pointer;
 }
 
-.options svg {
+.options.top svg {
     margin-right: 4px;
 }
 
-.options > :first-child {
+.options.top > :first-child {
     margin-right: 10px;
 }
 
-.options i {
+.options.top i {
     padding: 1px;
 }
 
 /* MAIN */
 
 main {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 140px);
     overflow-y: auto;
 }
 
@@ -77,6 +82,72 @@ main {
 
     line-height: 0;
     background-color: #4a4a4aaf;
+}
+
+/* FOOTER */
+
+footer {
+
+}
+
+.options.bottom {
+    background-color: #222222;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+/* .options {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+} */
+
+/* .options.top {
+    justify-content: flex-end;
+    position: relative;
+    right: 6px;
+    bottom: 16px;
+    background-color: black;
+} */
+
+.options.bottom i:not(.fa-angle-up) {
+    font-size: 30px;
+}
+
+.options.bottom > div {
+    display: flex;
+}
+
+.options.bottom > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.options.bottom > div > div > p {
+    margin-top: 8px;
+}
+
+.fa-share-from-square {
+    color: #4BC800;
+}
+
+.end {
+    color: #fc2626;
+    background-color: #4A4A4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
